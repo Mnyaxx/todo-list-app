@@ -1,58 +1,99 @@
-.App {
-  text-align: center;
+/* /src/App.css */
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* App Header */
+.app-header {
+  background-color: #5c67f2;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* src/App.css */
-.App {
+  padding: 20px;
   text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Main Container */
+.app-main {
   max-width: 600px;
   margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-input, textarea {
-  margin: 5px;
+/* Task Input Form */
+form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
   padding: 10px;
-  width: 100%;
-  box-sizing: border-box;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
 }
 
-button {
-  margin: 5px;
+input[type="date"] {
   padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
 }
 
+button[type="submit"] {
+  background-color: #5c67f2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #4e58c9;
+}
+
+/* Task List */
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.task h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.task.done h3 {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.task button {
+  background-color: transparent;
+  border: none;
+  color: #5c67f2;
+  cursor: pointer;  /* Corrected: Changed 'curs' to 'cursor' */
+  font-size: 16px;
+  transition: color 0.3s;
+}
